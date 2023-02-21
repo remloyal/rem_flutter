@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+// class Login extends StatelessWidget {
+//   const Login({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         debugShowCheckedModeBanner: false, // 不显示右上角的 debug
+//         title: 'Flutter Demo',
+//         theme: ThemeData(
+//           primarySwatch: Colors.blue,
+//         ),
+//         // 注册路由表
+//         routes: {
+//           "/": (context) => const Login(title: "登录"), // 首页路由
+//         });
+//   }
+// }
+
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false, // 不显示右上角的 debug
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        // 注册路由表
-        routes: {
-          "/": (context) => const HomePage(title: "登录"), // 首页路由
-        });
-  }
+  _LoginState createState() => _LoginState();
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class _LoginState extends State<Login> {
   final GlobalKey _formKey = GlobalKey<FormState>();
   late String _email, _password;
   bool _isObscure = true;
@@ -49,6 +48,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      // ),
+      appBar: AppBar(
+        brightness: Brightness.light,
+      ),
       body: Form(
         key: _formKey, // 设置globalKey，用于后面获取FormStat
         autovalidateMode: AutovalidateMode.onUserInteraction,
