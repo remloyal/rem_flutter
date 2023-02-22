@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'home/HomePage.dart';
+import '../components/IconFont.dart';
 
 //Tabs.dart
 class Tabs extends StatefulWidget {
   final int currentIndex; //1，定义传值参数
-  Tabs({key, this.currentIndex = 0}) : super(key: key); //2，重新写构造函数
+  const Tabs({key, this.currentIndex = 0}) : super(key: key); //2，重新写构造函数
 
   _TabsState createState() =>
       _TabsState(this.currentIndex); //3，将参数值传递给_TabsState
@@ -23,7 +24,7 @@ class _TabsState extends State<Tabs> {
       //   title: Text("AppBarTitle"),
       // ),
       //6，获取到传递过来的值,并使用
-      body: this._pageList[this._tabIndex],
+      body: _pageList[_tabIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         iconSize: 30,

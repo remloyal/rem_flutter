@@ -22,8 +22,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  # assets:
-  #   - assets/dist/
+  assets:
+    - lib/asset/images/
+    - lib/asset/media/
   fonts:
       - family: iconfont
         fonts:

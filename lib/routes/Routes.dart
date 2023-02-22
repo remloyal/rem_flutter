@@ -1,5 +1,7 @@
 //Routes.dart
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:jsca_xf_app/utils/Searchpage.dart';
 
@@ -13,6 +15,7 @@ final routes = {
 
 //统一处理命名路由
 var onGenerateRoute = (RouteSettings settings) {
+  print(settings);
   final String? name = settings.name;
   final Function pageContentBuilder = routes[name] as Function;
   if (pageContentBuilder != null) {
