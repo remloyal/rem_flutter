@@ -362,7 +362,7 @@ class _LoginState extends State<Login> {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: const Center(heightFactor: 1, child: Text("提示")),
+                      // title: const Center(heightFactor: 1, child: Text("滑块验证")),
                       content: Center(
                           heightFactor: 1,
                           child: SlideVerify(
